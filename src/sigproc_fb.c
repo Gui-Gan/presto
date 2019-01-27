@@ -124,7 +124,7 @@ void get_telescope_name(int telescope_id, struct spectra_info *s)
         strcpy(s->telescope, "VLA");
         s->beam_FWHM = default_beam;
         break;
-    case 20:  // May need to change....
+    case 25:  // May need to change....
         strcpy(s->telescope, "CHIME");
         s->beam_FWHM = 2.0 / 3600.0 * beam_halfwidth(s->fctr, 20.0);
         break;
@@ -140,7 +140,16 @@ void get_telescope_name(int telescope_id, struct spectra_info *s)
         strcpy(s->telescope, "KAT-7");
         s->beam_FWHM = default_beam;
         break;
-    default:
+    case 19:
+        strcpy(s->telescope, "IARA1");
+        s->beam_FWHM = 2.0 / 3600.0 * beam_halfwidth(s->fctr, 30.0);
+        break;
+    case 20:
+        strcpy(s->telescope, "IARA2");
+        s->beam_FWHM = 2.0 / 3600.0 * beam_halfwidth(s->fctr, 30.0);
+        break;
+
+        default:
         strcpy(s->telescope, "Unknown");
         s->beam_FWHM = default_beam;
         break;
@@ -190,6 +199,11 @@ void get_backend_name(int machine_id, struct spectra_info *s)
     case 65:
         strcpy(string, "KAT-DC2");
         break;
+    case 21:
+        strcpy(string, "USRP");
+        break;
+           
+            
     default:
         strcpy(s->backend, "Unknown");
         break;
