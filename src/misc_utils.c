@@ -36,7 +36,7 @@ char *rmtrail(char *str)
     if (str && 0 != (i = strlen(str))) {
         while (--i >= 0) {
             if (!isspace(str[i]))
-                break;
+                break; 
         }
         str[++i] = '\0';
     }
