@@ -145,11 +145,21 @@ char *make_polycos(char *parfilenm, infodata * idata, char *polycofilenm)
         scopechar = 'z';
         tracklen = 12;
     } else if (strcmp(idata->telescope, "MeerKAT") == 0) {
-        scopechar = 'm';
+        scopechar = 'c';
         tracklen = 12;
     } else if (strcmp(idata->telescope, "KAT-7") == 0) {
-        scopechar = 'k';
+        scopechar = 'b';
         tracklen = 12;
+     
+    } else if (strcmp(idata->telescope, "IARA1") == 0) {
+        scopechar = 'm';
+        tracklen = 12;
+
+    } else if (strcmp(idata->telescope, "IARA2") == 0) {
+        scopechar = 'n';
+        tracklen = 12;
+
+
     } else if (strcmp(idata->telescope, "Geocenter") == 0) {
         scopechar = 'o';
         tracklen = 12;
