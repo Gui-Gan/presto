@@ -260,7 +260,14 @@ void telescope_to_tempocode(char *inname, char *outname, char *obscode)
     } else if (strcmp(scope, "iara2") == 0) {
         strcpy(obscode, "A2");
         strcpy(outname, "IARA2");
-    
+
+    } else if (strcmp(scope, "dsa3") == 0) {
+        strcpy(obscode, "DSA3");
+        strcpy(outname, "DSA3-3");
+
+    } else if (strcmp(scope, "cltc") == 0) {
+        strcpy(obscode, "CLTC");
+        strcpy(outname, "CLTC-CONAE-NEUQUEN");    
 	    
     } else if (strcmp(scope, "geocenter") == 0) {
         strcpy(obscode, "0 ");
