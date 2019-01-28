@@ -140,15 +140,22 @@ void get_telescope_name(int telescope_id, struct spectra_info *s)
         strcpy(s->telescope, "KAT-7");
         s->beam_FWHM = default_beam;
         break;
-    case 19:
+    case 55:
         strcpy(s->telescope, "IARA1");
         s->beam_FWHM = 2.0 / 3600.0 * beam_halfwidth(s->fctr, 30.0);
         break;
-    case 20:
+    case 56:
         strcpy(s->telescope, "IARA2");
         s->beam_FWHM = 2.0 / 3600.0 * beam_halfwidth(s->fctr, 30.0);
         break;
-
+    case 57:
+        strcpy(s->telescope, "DSA3");
+        s->beam_FWHM = 2.0 / 3600.0 * beam_halfwidth(s->fctr, 35.0);
+        break;
+     case 58:
+        strcpy(s->telescope, "CLTC");
+        s->beam_FWHM = 2.0 / 3600.0 * beam_halfwidth(s->fctr, 35.0);
+        break;           
         default:
         strcpy(s->telescope, "Unknown");
         s->beam_FWHM = default_beam;
