@@ -159,6 +159,13 @@ char *make_polycos(char *parfilenm, infodata * idata, char *polycofilenm)
         scopechar = 'n';
         tracklen = 12;
 
+    } else if (strcmp(idata->telescope, "DSA3") == 0) {
+        scopechar = 'p';
+        tracklen = 12;
+
+    } else if (strcmp(idata->telescope, "CLTC") == 0) {
+        scopechar = 'q';
+        tracklen = 12;
 
     } else if (strcmp(idata->telescope, "Geocenter") == 0) {
         scopechar = 'o';
